@@ -1,0 +1,13 @@
+@use './variables';
+
+@mixin container{
+  width: 85%;
+  max-width: 70.5rem;
+  margin: 0 auto;
+}
+
+@mixin backgroundImage{
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}

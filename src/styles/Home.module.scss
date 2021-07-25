@@ -1,0 +1,181 @@
+@use '../styles/utilities/variables';
+@use '../styles/utilities/mixins';
+
+.wrapper{
+  min-height: 100vh;
+  display: grid;
+
+  .container{
+    @include mixins.container;
+  }
+
+  .header{
+
+    display: grid;
+
+    .navbar_wrapper{
+      @include mixins.backgroundImage;
+      min-height: 22.5rem;
+      position: relative;
+      background-position: center 80%;
+    }
+    
+    .slide_text_content{
+      background: variables.$white;
+      padding: 4.5rem 0;
+  
+      &_title{
+        color: variables.$black;
+        font-size: 1.9rem;
+        font-weight: 600;
+        letter-spacing: -0.5px;
+        margin-bottom: 1rem;
+        line-height: 2.25rem;
+      }
+  
+      &_description{
+        font-size: 0.74rem;
+        line-height: 1.2rem;
+        color: variables.$dark-gray;
+        margin-bottom: 3rem;
+      }
+  
+      .cta_button{
+        text-decoration: none;
+        font-weight: 600;
+        cursor: pointer;
+  
+        span{
+          text-transform: uppercase;
+          letter-spacing: 10px;
+          color: variables.$very-dark-gray;
+          font-size: .85rem;
+          margin-right: 2rem;
+        }
+      }
+    }
+  
+    .slide_buttons_navbar{
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+  
+    .slide_buttons_article{
+      display: none;
+    }
+  }
+
+  .about{
+
+    display: grid;
+
+    &_text_content{
+      background: variables.$white;
+      padding-top: 3rem;
+
+      &_title{
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        letter-spacing: 5px;
+        margin-bottom: 1rem;
+      }
+
+      &_description{
+        font-size: 0.74rem;
+        line-height: 1.2rem;
+        color: variables.$dark-gray;
+        margin-bottom: 3rem;
+      }
+    }
+
+    &_dark_image{
+      @include mixins.backgroundImage;
+      background-image: url('/images/image-about-dark.jpg');
+      min-height: 240px;
+      height: 100%;
+    }
+
+    &_light_image{
+      @include mixins.backgroundImage;
+      background-image: url('/images/image-about-light.jpg');
+      min-height: 240px;
+      height: 100%;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+
+  .wrapper{
+
+    grid-template-rows: 6.5fr 4fr;
+
+    .header{
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-areas: 
+      "nw nw nw nw nw nw nw stc stc stc stc stc";
+  
+      .navbar_wrapper{
+        background-position: center;
+        grid-area: nw;
+  
+        .slide_buttons_navbar{
+          display: none;
+        }
+      }
+  
+      .slide_text_content{
+        grid-area: stc;
+        position: relative;
+        padding: 2.5rem .5rem 2rem;
+  
+        &_title{
+          font-size: 2.1rem;
+          line-height: 1.1;
+          margin-bottom: 1.75rem;
+        }
+        
+        &_description{
+          margin-bottom: 2rem;
+        }
+
+        .cta_button{
+          span{
+            transition: 0.2s color ease-in-out;
+            font-size: .65rem;
+            
+            &:hover{
+              color: variables.$dark-gray;
+            }
+          }
+        }
+
+        .slide_buttons_article{
+          display: block;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+        }
+      }
+    }
+  
+    .about{
+      grid-template-columns: repeat(10, 1fr);
+      grid-template-areas: 
+      "di di di atc atc atc atc li li li";
+  
+      &_dark_image{
+        grid-area: di;
+      }
+  
+      &_text_content{
+        grid-area: atc;
+      }
+  
+      &_light_image{
+        grid-area: li;
+      }
+    }
+  }
+}  

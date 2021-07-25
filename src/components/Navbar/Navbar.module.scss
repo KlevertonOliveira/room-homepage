@@ -1,0 +1,91 @@
+@use '../../styles/utilities/variables';
+@use '../../styles/utilities/mixins';
+
+.navbar{
+  
+  &_content{
+    @include mixins.container;
+    padding: 2.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  &_menu_active{
+    background-color: variables.$white;
+  }
+
+  &_menu_inactive{
+    background-color: transparent;
+  }
+
+  &_button{
+    outline: none;
+    border: none;
+    background-color: transparent;
+  }
+
+   &_main{
+     display: flex;
+     align-items: center;
+     
+     &_logo{
+      flex: 1;
+      justify-content: center;
+    }
+
+    &_links{
+      justify-content: space-between;
+    }
+  }
+  
+  &_list{
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+  }
+
+  &_link{
+    text-decoration: none;
+    color: variables.$black;
+    text-transform: lowercase;
+    font-weight: 600;
+  }
+}
+
+.hidden{
+  display: none;
+}
+
+@media screen and (min-width: 1024px){
+  .navbar{
+
+    &_content{
+      justify-content: start;
+      gap: 3rem;
+    }
+
+    &_toggle_button{
+      display: none;  
+    }
+
+    &_main_logo{
+      display: block;
+      flex: 0;
+    }
+
+    &_main_links{
+      justify-self: start;
+      display: flex;
+    }
+
+    &_link{
+      color: variables.$white;
+
+      &:hover{
+        padding-bottom: 1rem;
+        border-bottom: 3px solid variables.$white;
+      }
+    }
+  }
+}

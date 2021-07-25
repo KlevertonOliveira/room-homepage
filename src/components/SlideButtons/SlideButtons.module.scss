@@ -1,0 +1,32 @@
+@use '../../styles/utilities/variables';
+
+.slides{
+
+  .slide_button{
+    height: 3.75rem;
+    width: 3.75rem;
+    background-color: variables.$black;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover{
+      background-color: variables.$very-dark-gray;
+    }
+
+    img{
+      height: 25%;
+      width: 25%;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px){
+  .slides{
+
+    .slide_button{
+      height: 4rem;
+    }
+  }
+}
