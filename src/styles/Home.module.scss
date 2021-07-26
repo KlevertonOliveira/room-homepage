@@ -50,7 +50,7 @@
           text-transform: uppercase;
           letter-spacing: 10px;
           color: variables.$very-dark-gray;
-          font-size: .85rem;
+          font-size: .75rem;
           margin-right: 2rem;
         }
 
@@ -114,9 +114,8 @@
 
   .wrapper{
 
-    grid-template-rows: 6.5fr 4fr;
-
     .header{
+      height: 33rem;
       grid-template-columns: repeat(10, 1fr);
       grid-template-areas: 
       "nw nw nw nw nw nw stc stc stc stc";
@@ -133,13 +132,20 @@
       .slide_text_content{
         grid-area: stc;
         position: relative;
+        display: grid;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 6fr 1fr;
 
         .container{
-          padding: 0 1.25rem;
+          grid-column: 1 / -1;
+          padding: 5rem 2rem 2rem;
         }
   
         &_title{
-          font-size: 1.875rem;
+          font-size: 2.35rem;
           line-height: 1.1;
           margin-bottom: 1.75rem;
         }
@@ -156,9 +162,7 @@
 
         .slide_buttons_article{
           display: block;
-          position: absolute;
-          bottom: 0;
-          left: 0;
+          grid-column: 1 / 2;
         }
       }
     }
@@ -174,6 +178,7 @@
   
       &_text_content{
         grid-area: atc;
+        padding: 4rem 2rem 1rem;
       }
   
       &_light_image{
