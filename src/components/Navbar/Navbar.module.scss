@@ -36,6 +36,10 @@
 
     &_links{
       justify-content: space-between;
+
+      a{
+        cursor: pointer;
+      }
     }
   }
   
@@ -71,7 +75,7 @@
 
     &_main_logo{
       display: block;
-      flex: 0;
+      flex: none;
     }
 
     &_main_links{

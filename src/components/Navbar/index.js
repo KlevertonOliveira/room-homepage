@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import Image from 'next/image';
+
 import styles from './Navbar.module.scss';
 
 export function Navbar({isToggleActive, setIsToggleActive}){
@@ -22,9 +24,19 @@ export function Navbar({isToggleActive, setIsToggleActive}){
               className={styles.navbar_button}
             >
               {isToggleActive?
-                (<img src='/images/icon-close.svg' alt='close navbar menu'/>)
+                (<Image
+                  src='/images/icon-close.svg'
+                  alt='close navbar menu'
+                  width='16'
+                  height='16' />
+                )
                 :
-                (<img src='/images/icon-hamburger.svg' alt='open navbar menu'/>)
+                (<Image
+                  src='/images/icon-hamburger.svg'
+                  alt='open navbar menu'
+                  width='20'
+                  height='14' />
+                )
               }          
             </button>
           </div>
@@ -33,8 +45,16 @@ export function Navbar({isToggleActive, setIsToggleActive}){
 
           <div className={`${styles.navbar_main} ${styles.navbar_main_logo} 
           ${isToggleActive && (styles.hidden)}`}>
-            
-            <img src='/images/logo.svg' alt='Logo'/>      
+            <Link href='#'>
+              <a>
+                <Image
+                  src='/images/logo.svg'
+                  alt='Logo'
+                  width='65'
+                  height='15'
+                />      
+              </a>
+            </Link>
           
           </div>
 

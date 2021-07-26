@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 
 import Head from 'next/head';
 import Link from 'next/link';
+import Image from 'next/image';
 
 import { Navbar } from '../components/Navbar';
 import { SlideButtons } from '../components/SlideButtons';
@@ -88,16 +89,18 @@ export default function Home() {
 
         <article className={styles.slide_text_content}>
           <div className={styles.container}>
-            <h1 className={styles.slide_text_content_title}>  {currentSlideContent.title}
+            <h1 className={styles.slide_text_content_title}>
+              {currentSlideContent.title}
             </h1>
             
-            <p className={styles.slide_text_content_description}>{currentSlideContent.description}
+            <p className={styles.slide_text_content_description}>
+              {currentSlideContent.description}
             </p>
             
             <Link href='#'>
               <a className={styles.cta_button}>
                 <span>Shop now</span>
-                <img src='/images/icon-arrow.svg' alt='Shop now!'/>
+                <Image src='/images/icon-arrow.svg' alt='Shop now!' width='40' height='12'/>
               </a>
             </Link>
           </div>

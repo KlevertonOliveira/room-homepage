@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 import styles from './SlideButtons.module.scss';
 
 export function SlideButtons({previousSlide, nextSlide}){
@@ -8,17 +10,23 @@ export function SlideButtons({previousSlide, nextSlide}){
       <button
         className={styles.slide_button}
         onClick={previousSlide}>
-          <img
+          <Image
             src='/images/icon-angle-left.svg'
-            alt='Previous slide' />
+            alt='Previous slide' 
+            width='15'
+            height='50'  
+          />
       </button>
 
       <button
         className={styles.slide_button}
         onClick={nextSlide}>
-        <img
+        <Image
           src='/images/icon-angle-right.svg'
-          alt='Next slide' />
+          alt='Next slide' 
+          width='15'
+          height='50'  
+        />
       </button>
     </div>
   )
