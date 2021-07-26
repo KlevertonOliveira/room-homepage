@@ -16,15 +16,16 @@
 
 ## :mag_right: About the project / Sobre o projeto
 
-Room Homepage is an application developed as a solution to the [challenge](https://www.frontendmentor.io/challenges/room-homepage-BtdBY_ENq) of the same name proposed by [Frontend Mentor](https://www.frontendmentor.io/) website. As a differential for the development of this application, I chose to use NextJS (Framework based on React JS) together with SASS (CSS3 extension) in order to make the development process more practical, agile and responsive.
+Room Homepage is an application developed as a solution to the [challenge](https://www.frontendmentor.io/challenges/room-homepage-BtdBY_ENq) of the same name proposed by [Frontend Mentor](https://www.frontendmentor.io/challenges) website. As a differential for the development of this application, I chose to use NextJS (Framework based on React JS) together with SASS (CSS3 extension) in order to make the development process more practical, agile and responsive.
 
-The application implements a design of a homepage for a company involved in the field of furniture decoration. As it is fully responsive, the application is suitable for viewing by devices with different screen sizes, implementing the interfaces established by the challenge respecting the intervals provided (from 375px and 1440px).
+The project was implemented respecting the responsive interface development model called "Mobile First", where initially the layout for mobile devices is created and, later, the structure created is adapted to the desktop model. In the case of this application, the development of the mobile interface was started considering the screen size of 375px and going up to 1440px, where it reaches the desktop model, as these were the reference values provided by the creators of the design of this challenge (however, the breakpoint which makes the division between the layouts is set at 1024px). Therefore, the application is fully responsive, adapting to devices with different screen sizes.
+
 
 ---
 
-Room Homepage é uma aplicação desenvolvida como solução ao [desafio](https://www.frontendmentor.io/challenges/room-homepage-BtdBY_ENq) de mesmo nome proposto pelo site [Frontend Mentor](https://www.frontendmentor.io/). Como diferencial para o desenvolvimento deste aplicativo, optei por utilizar NextJS (Framework baseado em React JS) juntamente com SASS (extensão do CSS3) com o objetivo de tornar o processo de desenvolvimento mais prático, ágil e responsivo.
+Room Homepage é uma aplicação desenvolvida como solução ao [desafio](https://www.frontendmentor.io/challenges/room-homepage-BtdBY_ENq) de mesmo nome proposto pelo site [Frontend Mentor](https://www.frontendmentor.io/challenges). Como diferencial para o desenvolvimento deste aplicativo, optei por utilizar NextJS (Framework baseado em React JS) juntamente com SASS (extensão do CSS3) com o objetivo de tornar o processo de desenvolvimento mais prático, ágil e responsivo.
 
-A aplicação implementa um projeto de uma homepage para uma empresa envolvida com o ramo de decoração mobiliária. Por ser totalmente responsiva, a aplicação atende à visualização por aparelhos com tamanhos de tela variados, implementando as interfaces estabelecidas pelo desafio respeitando os intervalos de tamanho fornecidos pelo mesmo, sendo a interface para mobile a partir de 375px e a desktop em 1440px.
+O projeto foi implementado respeitando o modelo de desenvolvimento de interfaces responsivas denominado "Mobile First", onde inicialmente é criado o layout para dispositivos móveis e, posteriormente, a estrutura criada é adaptada para o modelo desktop. No caso desta aplicação, o desenvolvimento da interface mobile foi iniciado considerando o tamanho de tela de 375px e indo até 1440px, onde alcança o modelo desktop, pois estes foram os valores de referência fornecidos pelos criadores do design deste desafio (no entanto, o breakpoint que faz a divisão entre os layouts é estabelecido em 1024px). Assim sendo, a aplicação é totalmente responsiva, adaptando-se a aparelhos com tamanhos de tela variados.
 
 ---
 
@@ -32,7 +33,7 @@ A aplicação implementa um projeto de uma homepage para uma empresa envolvida c
 
 ### Front end
 - HTML5
-- [SASS](https://sass-lang.com/) (CSS extension)
+- [SASS](https://sass-lang.com/) (CSS3 extension)
 - Javascript ES6
 - [NextJS](https://nextjs.org/) (React Framework)
 
